@@ -204,8 +204,7 @@ class czpubtran:
             )
             return False
         try:
-            self.__connection_detail[0].clear()
-            self.__connection_detail[1].clear()
+            self.__connection_detail = [[], []]
             if len(connection_decoded["connInfo"]["connections"]) >= 1:
                 connection = connection_decoded["connInfo"]["connections"][0]
                 _LOGGER.debug(
